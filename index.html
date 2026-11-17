@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KAL-SU | Your Digital World Starts Here</title>
+<style>
+*{box-sizing:border-box}
+body{margin:0;background:#0b0b0d;color:#f7f5ef;font-family:Arial,sans-serif;line-height:1.6}
+header{padding:20px 7%;border-bottom:1px solid #393126;display:flex;justify-content:space-between;align-items:center}
+.logo{font-size:27px;font-weight:bold;letter-spacing:4px;color:#e8c66d}
+nav a{color:white;text-decoration:none;margin-left:18px}
+.hero{text-align:center;padding:90px 7%;background:radial-gradient(circle at top,#46351a,#0b0b0d 65%)}
+h1{font-size:clamp(38px,7vw,65px);line-height:1.1}
+.gold{color:#e8c66d}
+p{color:#c5c0b7}
+.btn{display:inline-block;background:#e8c66d;color:#17130a;padding:13px 22px;border-radius:7px;text-decoration:none;font-weight:bold;margin:8px}
+section{padding:65px 7%}
+h2{font-size:32px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:18px}
+.card{background:#171719;border:1px solid #393126;border-radius:12px;padding:24px}
+.card h3{color:#e8c66d}
+.transfer{background:#131315}
+input{width:100%;padding:14px;margin:10px 0;background:#09090a;color:white;border:1px solid #74603a;border-radius:7px;font-size:17px}
+.result{background:#282113;padding:18px;border-radius:8px;color:#e8c66d;font-size:24px}
+footer{text-align:center;padding:30px;border-top:1px solid #393126;color:#aaa}
+.small{font-size:13px;color:#aaa}
+@media(max-width:550px){header{flex-direction:column;gap:12px}nav a{margin:0 7px;font-size:14px}}
+</style>
+</head>
+<body>
+<header>
+<div class="logo">KAL-SU</div>
+<nav>
+<a href="#boutique">Boutique</a>
+<a href="#transfert">Transfert</a>
+</nav>
+</header>
+
+<div class="hero">
+<p class="gold">BIENVENUE CHEZ KAL-SU</p>
+<h1>Your Digital World<br><span class="gold">Starts Here.</span></h1>
+<p>Ton univers numérique commence ici. Gaming, cartes cadeaux et solutions digitales.</p>
+<a class="btn" href="#boutique">Découvrir la boutique</a>
+<a class="btn" href="#transfert">KAL-SU Transfert</a>
+<p class="small">Première version du site — commandes et paiements non activés.</p>
+</div>
+
+<section id="boutique">
+<p class="gold">KAL-SU DIGITAL STORE</p>
+<h2>Notre boutique numérique</h2>
+<div class="grid">
+<div class="card"><h3>🎮 Gaming</h3><p>Free Fire, eFootball et autres produits gaming selon disponibilité.</p></div>
+<div class="card"><h3>🎁 Cartes cadeaux</h3><p>Google Play, PlayStation, Xbox, Steam et Apple, selon les régions compatibles.</p></div>
+<div class="card"><h3>⚡ Services digitaux</h3><p>Des produits et services numériques sélectionnés pour nos clients.</p></div>
+</div>
+<p class="small">Catalogue et prix en préparation. Disponibilités et compatibilités à confirmer.</p>
+</section>
+
+<section class="transfer" id="transfert">
+<p class="gold">KAL-SU TRANSFERT</p>
+<h2>Des transferts vers Haïti</h2>
+<p>Notre projet vise à faciliter les transferts vers MonCash et NatCash avec des partenaires autorisés.</p>
+<div class="card">
+<h3>Simulateur indicatif de commission</h3>
+<label for="amount">Montant à transférer en USD</label>
+<input id="amount" type="number" min="0" value="100">
+<div class="result">Commission estimée : <strong id="fee">$3.00</strong></div>
+<p class="small">Simulation basée sur un taux provisoire de 3 %, sans frais fixes. Ce n'est pas un tarif officiel. Les frais des partenaires ne sont pas inclus.</p>
+</div>
+<p class="small">Service en préparation. Aucun transfert ni paiement ne peut être effectué sur ce site actuellement. KAL-SU ne conserve pas de fonds.</p>
+</section>
+
+<section>
+<p class="gold">NOTRE ENGAGEMENT</p>
+<h2>Bienvenue dans l'univers KAL-SU</h2>
+<p>Une expérience numérique simple, accessible et transparente.</p>
+</section>
+
+<footer>
+<strong class="gold">KAL-SU</strong>
+<p>Your Digital World Starts Here.</p>
+<p>© 2026 KAL-SU. Tous droits réservés.</p>
+</footer>
+
+<script>
+const amount=document.getElementById('amount');
+const fee=document.getElementById('fee');
+amount.addEventListener('input',()=>{
+let value=Math.max(0,Number(amount.value)||0);
+fee.textContent='$'+(value*0.03).toFixed(2);
+});
+</script>
+</body>
+                                                                                                                                  </html>
+  
